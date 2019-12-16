@@ -1,0 +1,248 @@
+@import 'variables';
+@import '~bootstrap/scss/bootstrap.scss';
+
+.header {
+  border-top: 2px solid $primary;
+  z-index: 1030;
+  box-shadow: $perfect-shadow;
+
+  @media (max-width: 979px) {
+    position: fixed;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    top: 0;
+  }
+
+  i{
+    font-size: 24px;
+  }
+
+  &__topbar {
+
+    background: white;
+
+    &-title {
+      margin-top: -5px;
+      margin-bottom: 0;
+      color: $primary;
+    }
+
+    &-icon {
+      width: 3rem;
+      text-align: center;
+      vertical-align: middle;
+      padding: 0;
+    }
+
+    &-user-icon {
+      margin-top: -3px;
+      margin-right: 0;
+      vertical-align: middle;
+    }
+
+    &-logo {
+      padding-left: 0.5rem;
+    }
+
+    &-dropdown{
+      text-align: center;
+      padding-right: 0.5rem;
+    }
+
+    &-dropdown-menu{
+      top: 53px;
+      text-align: center;
+      background: white;
+      box-shadow: $box-shadow-sm;
+      border: none;
+      right: auto;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      padding: 0;
+
+      &__divider {
+        margin: 0;
+      }
+
+      &__item {
+        padding: 0.5rem 0;
+      }
+
+      &__item:hover {
+
+        border-radius: 0.25rem;
+
+      }
+
+    }
+
+    &-navbar {
+
+      @media (max-width: 568px) {
+
+        padding-left: 0;
+        padding-right: 0;
+
+      }
+
+      &-toggle {
+
+        &__exit {
+          display: none;
+        }
+
+      }
+
+    }
+
+    &-container {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 568px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+    }
+
+  }
+
+  &__bottombar {
+    background: $primary;
+
+    &-navbar {
+
+      padding: 0;
+
+      &-nav {
+
+        &__link {
+          padding: 1rem 1rem;
+          transition: background 1ms ease-in;
+          color: white;
+
+          &.active {
+            background: $primary-light;
+          }
+
+          &:hover {
+            background: $primary-light;
+            color: white;
+          }
+        }
+
+        &__icon {
+          margin: 0 6px;
+          vertical-align: middle;
+          font-size: 1.3rem;
+        }
+
+        &__dropdown-menu {
+          text-align: center;
+          background: $primary;
+          box-shadow: $box-shadow-sm;
+          border: none;
+          right: auto;
+          left: 50%;
+          -webkit-transform: translate(-50%, 0);
+          -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+          padding: 0;
+        }
+
+        &__dropdown-item {
+          padding: 0.5rem 0;
+
+          &:hover {
+            background: $primary-light;
+            border-radius: 0.25rem;
+          }
+
+        }
+
+      }
+
+      @media (max-width: 991.98px) {
+
+        &-collapse{
+          position: fixed;
+          top: 2px;
+          //top: 63px; /* Height of navbar */
+          bottom: 0;
+          left: -75%;
+          width: 75%;
+          height: 100vh;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          visibility: hidden;
+          text-align: left;
+          vertical-align:  middle;
+          font-size: 1.5em;
+          background: white;
+          overflow-x: hidden;
+          transition: visibility .5s ease-in-out, -webkit-transform .5s ease-in-out;
+          transition: transform .5s ease-in-out, visibility .5s ease-in-out;
+          transition: transform .5s ease-in-out, visibility .5s ease-in-out, -webkit-transform .3s ease-in-out;
+          z-index: 1;
+
+          &-bar {
+
+            &__exit {
+              display: inline-block;
+            }
+
+            &__logo{
+              padding-left: 15px;
+              padding-bottom: 5px;
+            }
+
+          }
+
+          &_open {
+            visibility: visible;
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+          }
+
+        }
+
+        &-nav {
+
+          &__icon {
+            margin-left: 1px;
+            margin-right: 10px;
+          }
+
+          &__item {
+
+            color: black;
+            background: white;
+
+          }
+
+          &__link {
+
+            font-size: 1.2rem;
+            color: black;
+
+            &.active {
+              color: $primary;
+              background: white;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
