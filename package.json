@@ -38,7 +38,7 @@
         "moment": "^2.24.0",
         "paginationjs": "^2.1.5",
         "popper.js": "^1.16.0",
-        "prismjs": "^1.17.1",
+        "prismjs": "^1.27.0",
         "slick-carousel": "^1.8.1",
         "sweetalert2": "^8.19.0",
         "toastr": "^2.1.4",
